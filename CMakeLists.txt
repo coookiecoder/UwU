@@ -12,4 +12,8 @@ FetchContent_MakeAvailable(SFML)
 
 add_executable(main src/main.cpp src/DataEntry.cpp)
 target_link_libraries(main PRIVATE sfml-graphics)
+target_link_libraries(main PRIVATE sfml-system)
+target_link_libraries(main PRIVATE sfml-window)
+target_link_libraries(main PRIVATE sfml-network)
+target_link_libraries(main PRIVATE sfml-audio)
 target_compile_features(main PRIVATE cxx_std_17)
