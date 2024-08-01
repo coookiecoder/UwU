@@ -8,8 +8,14 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-int main()
+#include <fstream>
+
+#include "DataEntry.hpp"
+
+int main(void)
 {
+	std::ifstream file("../../data/recipe.lua");
+
     auto window = sf::RenderWindow(sf::VideoMode(1840u, 1000u), "CMake SFML Project");
     window.setFramerateLimit(75);
 
